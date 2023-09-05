@@ -54,15 +54,16 @@ const searchButton = document.getElementById("search-button");
       <img src="${listing.images[0]}" alt="${listing.name}" class="list-image">
       <div class="listing-info">
           <h2 class="title">${listing.name}</h2>
-          <p>${listing.type} · ${listing.beds} beds · ${listing.bathrooms} bathrooms</p>
-          <p>${listing.price.total} per night</p>
-          <p>${listing.address}</p>
+          <p class="info">${listing.type} : ${listing.beds} , beds : ${listing.bathrooms} bathrooms</p>
+          <p class="rate">$${listing.price.total} per night</p>
+          <p class="address">${listing.address}</p>
         
          
       </div>
   `;
   // Add a button for booking cost breakdown
   const costButton = document.createElement("button");
+    costButton.className="costBreakDown"
   costButton.innerText = "Show Booking Cost Breakdown";
   costButton.addEventListener("click", () => showBookingCostBreakdown(listing));
   listingCard.appendChild(costButton);
@@ -70,6 +71,7 @@ const searchButton = document.getElementById("search-button");
   
     // Add a paragraph for the reviews count and average rating
     const reviewsP = document.createElement("p");
+    reviewsP.className="reviews"
     reviewsP.innerHTML = `Reviews: ${listing.reviewsCount} | Average Rating: ${listing.rating}`;
     listingCard.appendChild(reviewsP);
 
@@ -88,6 +90,7 @@ const searchButton = document.getElementById("search-button");
     }
       // Add an amenities preview
     const amenitiesPreview = document.createElement("p");
+    amenitiesPreview.className="amenities"
     amenitiesPreview.innerText = `Amenities: ${createAmenitiesPreview(listing.previewAmenities)}`;
     listingCard.appendChild(amenitiesPreview);
 
