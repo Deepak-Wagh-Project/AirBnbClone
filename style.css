@@ -20,6 +20,7 @@
     grid-template-columns: 22% 22% 22% 22%;
     justify-content: center;
     column-gap: 2%;
+    row-gap: 10px;
 }
 #map {
     height: 400px;
