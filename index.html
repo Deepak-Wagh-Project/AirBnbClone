@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb Clone</title>
     <link rel="stylesheet" href="style.css">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-b23wDnuP-bnSWXFN-MxTjE81y0UlEM&callback=initMap"></script>
-
-    <script src="app.js"></script>
-    
 </head>
 <body>
     <header>
@@ -17,18 +13,17 @@
     <main>
         <!-- Search bar, listings, and map will go here -->
         <div id="search-bar">
-            <input id="search-input" type="text" value="bengaluru" placeholder="Search listings...">
-            <button id="search-button">Search</button>
+            <input id="search-input" type="text" placeholder="Search listings...">
+            <button id="search-button" onclick="getList()">Search</button>
         </div>
-        <div id="display">
-        <div id="map"></div>
         <div id="listings-container">
             <!-- Listings will be appended here -->
         </div>
-    </div>
+        <div id="map"></div>
     </main>
     <footer>
         <!-- Footer will go here -->
     </footer>
-   </body>
+    <script src="app.js"></script>
+</body>
 </html>
