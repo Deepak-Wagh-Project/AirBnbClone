@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
-            "e72a6478cemshfca8a0744c3bc2dp182cf2jsnbca1138eccda",
+            "90089f1dd3msh92e7fe05ad074fep10d56cjsn7ae65168be8d",
           "X-RapidAPI-Host": "airbnb13.p.rapidapi.com",
         },
       };
